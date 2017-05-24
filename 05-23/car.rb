@@ -1,4 +1,5 @@
 class Car
+  attr_accessor :speed, :make
   def initialize(make)
     @speed = 0
     @make = make
