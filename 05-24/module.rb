@@ -16,17 +16,13 @@ module Vehicle
       puts "You are now going #{@speed} miles per hour. From a module."
     end
   end
-end
-
-class Car
-  include Vehicle
-  attr_accessor :speed, :make
-  def initialize(make)
-    @speed = 0
-    @make = make
-    puts "You have a car! It's a #{@make}!"
-  end
-  def how_fast
-    puts "This car is broken. It can't move."
+  class Car
+    include Vehicle
+    attr_accessor :speed, :make
+    def initialize(make)
+      @speed = 0
+      @make = make
+      puts "You have a car! It's a #{@make}!"
+    end
   end
 end
