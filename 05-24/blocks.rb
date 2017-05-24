@@ -17,7 +17,12 @@ musical_instruments.each do |instrument,family|
   puts "#{instrument} is in the #{family} family."
 end
 
-# Hash passed to a block using only the value
-musical_instruments.each do |_,family|
+# Hash passed to a block using only the value and
+# the .each_value iterator
+musical_instruments.each_value do |family|
   puts "#{family} is a group of instruments in the orchestra"
+end
+
+musical_instruments.each_key do |instrument|
+  puts "#{instrument} is a noise-maker in the orchestra"
 end
