@@ -19,6 +19,8 @@ Things you may want to cover:
 
 * How to run the test suite
 
+* How to be so awesome at Rails
+
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
