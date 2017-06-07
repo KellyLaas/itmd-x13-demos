@@ -1,7 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  term: MyString
+sally_schedule:
+  term: Fall 2017
+  student: sally
+  courses:
+    - itmd_413
+    - com_530
 
-two:
-  term: MyString
+doug_schedule:
+  term: Fall 2017
+  student: doug
+  courses:
+    - com_530
