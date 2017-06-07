@@ -24,4 +24,17 @@ class CourseTest < ActiveSupport::TestCase
       assert new_subject(subject).invalid?, "#{subject} should not be valid"
     end
   end
+  test "location must be 2-4 letters, 3 numbers or whatever the Tower does" do
+    good = ['SH 218', 'MTCC 209', 'IT 8E4-1']
+    bad = ['Siegel Hall 109', 'MTCCCC 2', 'PH 25']
+    def new_location(location)
+      course = Course.new(location: location, subject: 'ITMD 413')
+    end
+    good.each do |location|
+      assert new_location(location).valid?, "#{location} should be valid"
+    end
+    bad.each do |location|
+      assert new_location(location).invalid?, "#{location} should not be valid"
+    end
+  end
 end

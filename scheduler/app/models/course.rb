@@ -5,4 +5,8 @@ class Course < ApplicationRecord
     with: /\A[A-Z]{2,4} \d{3}\z/,
     message: "subject must be XXXX 123"
   }
+  validates :location, format: {
+    with: /\A[A-Z]{2,4} [0-9A-Z-]{3,6}\z/,
+    message: "subject must be XXXX 123"
+  }
 end
