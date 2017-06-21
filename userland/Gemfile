@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom gems
 gem 'haml-rails'
+
+# Use OmniAuth for GitHub authentication
+gem 'omniauth-github'
