@@ -6,5 +6,6 @@ class SessionsController < ApplicationController
       user.name = auth_hash['info']['name']
       user.nickname = auth_hash['info']['nickname']
     end
+    self.current_user = @user
   end
 end
