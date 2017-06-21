@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  def signed_in?
+    !!current_user
+  end
+
   def current_user=(user)
     @current_user = user
     session[:user_uid] = @current_user.uid
@@ -16,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    if session[:user_uid].nil?
+    unless signed_in?
       redirect_to login_path
     end
   end
