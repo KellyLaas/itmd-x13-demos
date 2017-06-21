@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
       user.image_url = auth_hash['info']['image']
     end
     self.current_user = @user
+    redirect_to posts_url
   end
 
   def logout
