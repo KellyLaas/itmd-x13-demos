@@ -2,6 +2,9 @@ class SessionsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def login
+    if signed_in?
+      redirect_to posts_url
+    end
   end
 
   def create
