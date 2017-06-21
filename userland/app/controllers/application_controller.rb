@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(uid: session[:user_uid])
   end
 
-  helper_method :current_user
+  helper_method :current_user, :signed_in?
 
   def current_user=(user)
     session[:user_uid] = user.uid
