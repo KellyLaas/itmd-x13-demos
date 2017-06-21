@@ -15,4 +15,9 @@ class ApplicationController < ActionController::Base
     session[:user_name] = @current_user.name
   end
 
+  def authenticate_user
+    if session[:user_uid].nil?
+      redirect_to login_path
+    end
+  end
 end
