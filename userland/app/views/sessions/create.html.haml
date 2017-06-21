@@ -1,3 +1,7 @@
-%pre= "Welcome, #{@provider_response['info']['name']}"
+%ul
+  %li= @provider_response['uid']
+  %li= @provider_response['info']['name']
+  %li= @provider_response['info']['email']
+  %li= @provider_response['info']['image']
 
-%pre= @provider_response.inspect
+%pre= @provider_response['info'].inspect
